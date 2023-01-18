@@ -7,6 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      #style{
+        margin-left: 30%;
+        margin-top: 10%;
+      }
+      #submit{
+        margin-left: 5%;
+      }
+    </style>
 
     <title>Scanning Daily Report</title>
   </head>
@@ -16,10 +25,15 @@
       id="sheetdb-form"
       action="https://sheetdb.io/api/v1/d2taigps2plvm"
     >
-      ID: <input name="data[ID]" /> Name: <input name="data[NAME]" /> Total-File:<input
-        name="data[TOTAL-FILE]"/> Total-Scanned-Page: <input name="data[TOTAL-SCANNED-PAGE]"/>  Soft-File-Recived: <input name="data[SOFT-FILE-RECEIVED]"
-      />
-      <button type="submit">Submit</button>
+    <p id = "style">
+      Date: <br><input name="data[DATE]" /> <br>
+      ID: <br><input name="data[ID]" /> <br>
+      Name: <br><input name="data[NAME]" /> <br>
+      Total-File: <br><input name="data[TOTAL-FILE]"/><br>
+      Total-Scanned-Page: <br><input name="data[TOTAL-SCANNED-PAGE]"/><br>
+      Soft-File-Received: <br><input name="data[SOFT-FILE-RECEIVED]"/><br><br>
+      <button id = "submit" type="submit">Submit</button>
+    </p>
     </form>
 
     <script>
@@ -33,7 +47,7 @@
           .then((response) => response.json())
           .then((html) => {
             // you can put any JS code here
-            alert("success");
+            alert("Successfully submitted your report!");
           });
       });
     </script>
