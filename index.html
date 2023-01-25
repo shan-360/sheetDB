@@ -47,16 +47,206 @@
 <body>
   <form method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/d2taigps2plvm">
     <p id="style">
-      <b>Date:</b> <br><input name="data[DATE]" /> <br>
-      <b>ID:</b> <br><input name="data[ID]" /> <br>
-      <b>Name:</b> <br><input name="data[NAME]" /> <br>
-      <b>Total-File:</b> <br><input name="data[TOTAL-FILE]" /><br>
-      <b>Total-Scanned-Page:</b> <br><input name="data[TOTAL-SCANNED-PAGE]" /><br>
+      <b>Date:</b> <br><input type="date" name="data[DATE]" /> <br>
+      <b>ID:</b> <br><input id="id" type="number" list="idNumber" name="data[ID]" />
+      <datalist id="idNumber">
+        <!-- Safayat Imtiaz -->
+        <option>5001</option>
+        <!-- Bidhan Sarkar -->
+        <option>5002</option>
+        <!-- Joti Uddin -->
+        <option>5005</option>
+        <!-- Forhad Miah -->
+        <option>5004</option>
+        <!-- Pranab Paul -->
+        <option>5006</option>
+        <!-- Taimur Rahman -->
+        <option>5007</option>
+        <!-- Mahir Ashif -->
+        <option>5008</option>
+        <!--Abdur Rahman  -->
+        <option>5009</option>
+        <!-- Shafiul Islam -->
+        <option>5010</option>
+        <!-- Safiqur Rahman Sayem  -->
+        <option>5013</option>
+        <!-- Nazmul Haque -->
+        <option>5014</option>
+        <!-- Ripon Kuman Das -->
+        <option>5015</option>
+        <!-- Mozaharul Islam -->
+        <option>5016</option>
+        <!-- Sabbir Ahmed -->
+        <option>5017</option>
+        <!-- Sohanur Rahman -->
+        <option>5018</option>
+        <!-- Atikur Rahman Antu -->
+        <option>5020</option>
+        <!-- Rabbi Hossain -->
+        <option>5021</option>
+        <!-- Namira Saima Mahmud -->
+        <option>5022</option>
+        <!-- Rifat Prodhan -->
+        <option>5024</option>
+        <!-- Johirul Islam -->
+        <option>5026</option>
+        <!-- Golam Mostofa -->
+        <option>5027</option>
+        <!-- Shaidur Rahman -->
+        <option>5028</option>
+        <!-- Nur Mostafa Al-Amin -->
+        <option>5029</option>
+        <!-- Md. Sohel -->
+        <option>5030</option>
+        <!-- Bappi Das -->
+        <option>5031</option>
+        <!-- Abu Mosa -->
+        <option>5032</option>
+        <!-- Md. Shabbir Ahmed -->
+        <option>5033</option>
+        <!-- Nadim -->
+        <option>5034</option>
+        <!-- Md. Humayun Kabir Leeon -->
+        <option>5035</option>
+        <!-- Mohammad Sohel -->
+        <option>5036</option>
+        <!-- Azizur Rahman -->
+        <option>5037</option>
+        <!-- Shorif Hossain -->
+        <option>5038</option>
+        <!-- Shahanaj Aktar -->
+        <option>5039</option>
+        <!-- Md. Shohanur Rhman Sohan -->
+        <option>5041</option>
+        <!-- Md. Abdullah Al Mahdi -->
+        <option>5042</option>
+        <!-- Md. Minhajul Islam -->
+        <option>5043</option>
+        <!-- Obaidur Rahman -->
+        <option>5047</option>
+        <!-- Nilufa -->
+        <option>5048</option>
+        <!-- Md. Alamgir Kabir -->
+        <option>5049</option>
+        <!-- Mehraz Hossain -->
+        <option>5050</option>
+      </datalist>
+      <br>
+      <b>Name:</b> <br><input id="name" onclick="myFunction()" name="data[NAME]" /> <br>
+      <b>Scan/Entry:</b> <br><input list="Scan/Entry" name="data[SCAN/ENTRY]" />
+      <datalist id="Scan/Entry">
+        <option>SCAN</option>
+        <option>ENTRY</option>
+      </datalist>
+      <br>
+      <b>Total-File:</b> <br><input type="number" name="data[TOTAL-FILE]" /><br>
+      <b>Total-Scanned-Page:</b> <br><input type="number" name="data[TOTAL-SCANNED-PAGE]" /><br>
       <b>Other-Work:</b> <br><input name="data[OTHER-WORK]" /><br>
-      <b>Soft-File-Received:</b> <br><input name="data[SOFT-FILE-RECEIVED]" /><br><br>
+      <b>Soft-File-Received:</b> <br><input list="yes/no" name="data[SOFT-FILE-RECEIVED]" />
+      <datalist id="yes/no">
+        <option>YES</option>
+        <option>NO</option>
+      </datalist>
+      <br><br>
       <button id="submit" type="submit">Submit</button>
     </p>
   </form>
+
+  <script>
+    //today date
+    let today = new Date().toLocaleDateString()
+    console.log(today)
+  </script>
+  <script>
+    //id respect name
+    let id = document.getElementById("id").value
+    let name = document.getElementById("name");
+    function myFunction(addEventListener) {
+      if (id == 5001) {
+        name.innerValue = "Safayat Imtiaz"
+      } else if (id == 5002) {
+        name.value = "Bidhan Sarkar"
+      } else if (id == 5005) {
+        name.value = "Joti Uddin"
+      } else if (id == 5004) {
+        name = "Forhad Miah"
+      } else if (id == 5006) {
+        name = "Pranab Paul"
+      } else if (id == 5007) {
+        name = "Taimur Rahman"
+      } else if (id == 5008) {
+        name = "Mahir Ashif"
+      } else if (id == 5009) {
+        name = "Abdur Rahman"
+      } else if (id == 5010) {
+        name = "Shafiul Islam"
+      } else if (id == 5013) {
+        name = "Safiqur Rahman Sayem"
+      } else if (id == 5014) {
+        name = "Nazmul Haque"
+      } else if (id == 5015) {
+        name = "Ripon Kuman Das"
+      } else if (id == 5016) {
+        name = "Mozaharul Islam"
+      } else if (id == 5017) {
+        name = "Sabbir Ahmed"
+      } else if (id == 5018) {
+        name = "Sohanur Rahman"
+      } else if (id == 5020) {
+        name = "Atikur Rahman Antu"
+      } else if (id == 5021) {
+        name = "Rabbi Hossain"
+      } else if (id == 5022) {
+        name = "Namira Saima Mahmud"
+      } else if (id == 5024) {
+        name = "Rifat Prodhan"
+      } else if (id == 5026) {
+        name = "Johirul Islam"
+      } else if (id == 5027) {
+        name = "Golam Mostofa"
+      } else if (id == 5028) {
+        name = "Shaidur Rahman"
+      } else if (id == 5029) {
+        name = "Nur Mostafa Al-Amin"
+      } else if (id == 5030) {
+        name = "Md. Sohel"
+      } else if (id == 5031) {
+        name = "Bappi Das"
+      } else if (id == 5032) {
+        name = "Abu Mosa"
+      } else if (id == 5033) {
+        name = "Md. Shabbir Ahmed"
+      } else if (id == 5034) {
+        name = "Nadim"
+      } else if (id == 5035) {
+        name = "Md. Humayun Kabir Leeon"
+      } else if (id == 5036) {
+        name = "Mohammad Sohel"
+      } else if (id == 5037) {
+        name = "Azizur Rahman"
+      } else if (id == 5038) {
+        name = "Shorif Hossain"
+      } else if (id == 5039) {
+        name = "Shahanaj Aktar"
+      } else if (id == 5041) {
+        name = "Md. Shohanur Rhman Sohan"
+      } else if (id == 5042) {
+        name = "Md. Abdullah Al Mahdi"
+      } else if (id == 5043) {
+        name = "Md. Minhajul Islam"
+      } else if (id == 5047) {
+        name = "Obaidur Rahman"
+      } else if (id == 5048) {
+        name = "Nilufa"
+      } else if (id == 5049) {
+        name = "Md. Alamgir Kabir"
+      } else if (id == 5050) {
+        name = "Mehraz Hossain"
+      }
+    }
+
+
+  </script>
 
   <script>
     var form = document.getElementById("sheetdb-form");
@@ -85,8 +275,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-      <!-- for disable devtool -->
-    <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
+  <!-- for disable devtool -->
+  <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
 </body>
 
 </html>
