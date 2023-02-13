@@ -50,6 +50,7 @@
       <b>Date:</b> <br><input type="date" name="data[DATE]" /> <br>
       <b>ID:</b> <br><input id="id" type="number" list="idNumber" name="data[ID]" />
       <datalist id="idNumber">
+        <!--
         <!-- Safayat Imtiaz -->
         <option>5001</option>
         <!-- Bidhan Sarkar -->
@@ -130,6 +131,12 @@
         <option>5049</option>
         <!-- Mehraz Hossain -->
         <option>5050</option>
+        -->
+        <script>
+  for(let id = 5000; id <= 5060; id++) {
+      document.getElementById('idNumber').innerHTML += `<option>${id}</option>`
+  }
+</script>
       </datalist>
       <br>
       <b>Name:</b> <br><input id="name" onclick="myFunction()" name="data[NAME]" /> <br>
